@@ -1,0 +1,59 @@
+   /* Desktop Styles */
+        .job-listing {
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: border-color 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .job-listing h2 {
+            font-size: 20px;
+            color: #333;
+            margin: 0;
+        }
+
+        .job-listing-meta {
+            display: flex;
+            gap: 300px; /* Adjusted to maintain spacing */
+        }
+
+        .job-listing-meta a {
+            padding: 10px 20px;
+            font-size: 14px;
+            border-radius: 5px;
+            text-decoration: none;
+            background-color: #89ba16;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .job-listing:hover {
+            border-color: #89ba16;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .job-listing {
+                flex-direction: column; /* Stack elements vertically on small screens */
+                align-items: flex-start;
+            }
+
+            .job-listing-meta {
+                width: 100%;
+                gap: 5px; /* Adjusted for better spacing on mobile */
+            }
+
+            .job-listing-meta a {
+                width: 100%; /* Buttons take full width on small screens */
+                margin-bottom: 10px; /* Add spacing between buttons */
+                text-align: center; /* Center text inside buttons */
+            }
+        }

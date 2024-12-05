@@ -1,0 +1,140 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    color: #495057;
+}
+
+.header {
+    background-color: #343a40;
+    padding: 20px 0;
+    color: white;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #0056b3;
+}
+
+.about-section {
+    padding: 60px 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #343a40;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: #6c757d;
+}
+
+.about-content {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.about-content h2 {
+    font-size: 1.8rem;
+    color: #343a40;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    color: #6c757d;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.about-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-content ul li {
+    font-size: 1.1rem;
+    color: #495057;
+    margin: 10px 0;
+    text-align: left;
+}
+
+.footer {
+    background-color: #343a40;
+    padding: 20px 0;
+    color: white;
+    margin-top: 40px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-content {
+        margin-bottom: 30px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .about-content ul li {
+        font-size: 1rem;
+    }
+
+    /* Make section titles and content more responsive */
+    .section-title, .section-subtitle {
+        text-align: center;
+    }
+
+    .about-content h2 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .about-content p, .about-content ul {
+        text-align: center;
+    }
+
+    .about-content ul li {
+        font-size: 1rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.6rem;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1.4rem;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 0.85rem;
+    }
+}

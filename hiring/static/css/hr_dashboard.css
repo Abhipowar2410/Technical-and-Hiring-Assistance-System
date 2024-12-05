@@ -1,0 +1,62 @@
+    /* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+
+}
+
+/* Section Styles */
+.site-section {
+    padding: 60px 0; /* Top and bottom padding */
+}
+
+/* Table Styles */
+.table {
+    width: 100%; /* Full width for responsive layout */
+    border-collapse: collapse; /* Remove gaps between borders */
+}
+
+.table-dark {
+    background-color: #343a40; /* Dark background for header */
+    color: white; /* White text for header */
+}
+
+/* Table Row Styles */
+.table-bordered th{
+    color:#fff;
+
+}
+.table-bordered td {
+    border: 2px solid #dee2e6; /* Border for table cells */
+    color:#34495e;
+}
+
+/* Button Styles */
+.btn-view-profile {
+    background-color: #89ba16; /* Updated button color */
+    color: white;
+    border-radius: 20px; /* Rounded corners */
+    padding: 8px 16px; /* Padding for button */
+    transition: all 0.3s ease; /* Smooth transition */
+    text-decoration: none; /* Remove underline */
+}
+
+.btn-view-profile:hover {
+    background-color: #34495e;
+      color:#fff;
+/* Darker shade on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .site-section {
+        padding: 30px 0; /* Less padding for smaller screens */
+    }
+
+    .table {
+        font-size: 14px; /* Smaller text for mobile */
+    }
+
+    .btn-view-profile {
+        padding: 6px 12px; /* Smaller button padding for mobile */
+    }
+}

@@ -1,0 +1,23 @@
+
+{% if messages %}
+{% for i in messages %}
+<div class="alert {{i.tags}}" id="msg">
+{{i}}
+</div>
+{% endfor %}
+{% endif %}
+<style>
+/* message.css */
+.message-popup {
+    display: block; /* Ensure the message is visible initially */
+    position: absolute;
+    margin: auto;
+    right: 40%;
+    width: 500px; /* Adjust max-width as needed */
+    color: #721c24; /* Text color for the alert */
+    padding: 10px;
+    z-index: 1000;
+    text-align: center;
+    transition: opacity 0.5s ease-in-out; /* Smooth fade-out effect */
+}
+</style>

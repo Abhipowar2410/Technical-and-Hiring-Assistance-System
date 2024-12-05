@@ -1,0 +1,150 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color:#ebf5fb !important;
+}
+
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero Section */
+.section-hero {
+    background-size: cover;
+    background-position: center;
+    color: gray;
+    padding: 80px 0;
+}
+
+.section-hero .text-white {
+    color: #fff;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.section-hero .custom-breadcrumbs {
+    margin-top: 10px;
+}
+
+.section-hero .custom-breadcrumbs a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.section-hero .custom-breadcrumbs .slash {
+    color: #fff;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+}
+
+table td {
+    background-color: #ffffff;
+}
+
+/* Certificates Section */
+.certificates {
+    margin-top: 40px;
+}
+
+.certificates h3 {
+    font-size: 28px;
+    color: #007bff;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+.certificate-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.certificate-item h4 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #007bff;
+}
+
+.certificate-item p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.resume-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.resume-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-hero {
+        padding: 50px 0;
+        text-align: center;
+    }
+
+    .section-hero .text-white {
+        font-size: 28px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    table {
+        font-size: 14px;
+        border: none;
+        box-shadow: none;
+    }
+
+    table th, table td {
+        padding: 10px;
+    }
+
+    .certificates h3 {
+        font-size: 22px;
+    }
+
+    .certificate-item {
+        padding: 15px;
+    }
+
+    .certificate-item h4 {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:200,300,400,700");
+      .navbar-custom {
+        background-color: #333;
+        color: #fff;
+        margin-bottom: 0px;
+  z-index: 1999;
+  position: absolute;
+  width: 100%;
+  top: 2rem; }
+  .site-navbar .container-fluid {
+    padding-left: 7rem;
+    padding-right: 7rem; }
+
+      }
+      .navbar-custom a {
+        color: #fff;
+      }
+      .navbar-custom .form-control {
+        margin-right: 10px;
+      }
+      .navbar-custom .btn {
+        margin-right: 10px;
+      }
+
+      /* Navbar Styles */
+      .navbar-custom {
+        background-color: #343a40;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+      .navbar-custom .navbar-brand {
+        color: #fff;
+      }
+      .navbar-custom .nav-link {
+        color: rgba(255, 255, 255, 0.7);
+      }
+      .navbar-custom .nav-link:hover {
+        color: #fff;
+      }
+      .site-logo a {
+        color: #fff;
+        font-size: 1.5rem;
+        letter-spacing: .2rem;
+        text-transform: uppercase;
+      }
+      .site-logo a:hover {
+        text-decoration: none;
+      }
+      .offcanvas-body {
+        padding-top: 2rem;
+      }

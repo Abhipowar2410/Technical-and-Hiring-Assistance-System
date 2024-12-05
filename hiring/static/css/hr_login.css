@@ -1,0 +1,112 @@
+body {
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.7;
+    background-color: #f8f9fa;
+}
+
+.section-hero {
+    position: relative;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 30px;
+    background: url('{% static "images/hero_1.jpg" %}') no-repeat center center;
+    background-size: cover;
+}
+
+.section-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1; /* Place overlay above the image */
+}
+
+.section-hero h1,
+.section-hero .custom-breadcrumbs {
+    position: relative; /* Ensure text appears above the overlay */
+    z-index: 2;
+    color: white; /* Set font color to white */
+
+}
+
+.custom-breadcrumbs a {
+    color: #89ba16; /* Link color */
+}
+
+.custom-breadcrumbs a:hover {
+    color: #fff; /* Link hover color */
+}
+
+/* Form styles */
+.site-section {
+    position: relative;
+    padding: 60px 0; /* Adjust padding as needed */
+    background-image: url('{% static "images/back.img" %}'); /* Background image */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+}
+
+.form-container {
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Inner padding */
+}
+
+form {
+    border: 2px solid #ddd; /* Light border for forms */
+    border-radius: 0.5rem; /* Rounded corners */
+    background: #fff; /* White background for forms */
+    padding: 2rem; /* Inner padding for forms */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Button styles */
+.btn-primary {
+    background-color: #89ba16; /* Primary button color */
+    border-color: #89ba16; /* Border color */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #78a415;
+    border-color: #78a415;
+    transform: scale(1.05);
+}
+
+.btn-primary:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(137, 186, 22, 0.5);
+}
+
+h2 {
+    color: #89ba16;
+        font-weight:bold;
+
+}
+
+.form-check-label {
+    color: #333;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .section-hero {
+        padding-right: 15px;
+        justify-content: center;
+    }
+
+    .section-hero h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .custom-breadcrumbs {
+        font-size: 14px;
+        text-align: center;
+    }
+}

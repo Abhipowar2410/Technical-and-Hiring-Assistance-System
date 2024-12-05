@@ -1,0 +1,61 @@
+    /* Custom Button Style */
+    .btn-custom {
+      background-color: #89ba16;
+      border-color: #89ba16;
+      color: white;
+      border-width: 2px;
+      padding: 0.5rem 1rem;
+      font-size: 12px;
+      text-transform: uppercase;
+      border-radius: 0.50rem;
+      transition: background-color 0.3s, border-color 0.3s;
+      font-weight: bold;
+    }
+
+    .btn-custom:hover {
+      background-color: #78a415;
+      border-color: #78a415;
+      color: white;
+    }
+
+    /* Navbar styles */
+    .site-logo {
+      flex-grow: 1;
+    }
+
+    .session-name {
+      font-family: 'Nunito', sans-serif;
+      font-weight: bold;
+      font-size: 24px; /* Increased font size */
+      text-transform: uppercase; /* Capitalize the text */
+      color: #fff; /* Text color */
+    }
+
+    /* Mobile view adjustments */
+    @media (max-width: 992px) {
+      .navbar-nav {
+        flex-direction: column;
+      }
+
+      .nav-item {
+        margin-bottom: 0.5rem;
+      }
+
+      .session-name {
+        font-size: 20px; /* Slightly smaller font for mobile */
+      }
+
+      .navbar {
+        padding: 1rem;
+      }
+    }
+
+    /* Spacing for desktop view */
+    .nav-item {
+      margin-right: 1rem; /* Space between buttons */
+    }
+
+    /* Apply the Nunito font to the navbar */
+    .site-navbar {
+      font-family: 'Nunito', sans-serif;
+    }

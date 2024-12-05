@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ course.course }} - {{ level }} Quiz</title>
+         <link rel="stylesheet" href="{% static 'css/quiz.css' %}">
+
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="form-outline">
+        <form method="post">
+            {% csrf_token %}
+            <label for="name">Name</label>
+<input type="text" id="name" name="name" value="{{ session.name }}" required />
+
+            <label>Email</label>
+            <input type="email" name="email"value="{{request.session.username}}" readonly />
+
+            <label >Course</label>
+            <input type="text" name="course" value="{{ course.course }}" readonly />
+
+            <label>Course Level</label>
+            <input type="text" name="level" value="{{ level }}" readonly />
+
+            <h1>{{ course.course }} - {{ level }} Quiz</h1>
+
+            {% for question in questions %}
+                <div class="question">
+                    <p>{{ question.question }}</p>
+                    <div class="options">
+                        <label><input type="radio" name="question_{{ question.id }}" value="{{ question.optionA }}" required> {{ question.optionA }}</label>
+                        <label><input type="radio" name="question_{{ question.id }}" value="{{ question.optionB }}" required> {{ question.optionB }}</label>
+                        <label><input type="radio" name="question_{{ question.id }}" value="{{ question.optionC }}" required> {{ question.optionC }}</label>
+                        <label><input type="radio" name="question_{{ question.id }}" value="{{ question.optionD }}" required> {{ question.optionD }}</label>
+                    </div>
+                </div>
+            {% endfor %}
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

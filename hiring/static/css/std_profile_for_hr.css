@@ -1,0 +1,206 @@
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+    background-color: #ebf5fb !important;
+
+        }
+.section-hero {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; /* Default text color */
+    text-align: left;
+    padding: 0 15px;
+    font-weight: bold;
+}
+
+.section-hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1); /* Dark overlay for text readability */
+}
+
+.section-hero h1 {
+    font-size: 2rem;
+    color: white; /* Ensures h1 is white */
+    font-weight: bold;
+}
+
+.custom-breadcrumbs {
+    margin-top: 5px;
+}
+
+.custom-breadcrumbs a {
+    color: white; /* Link color */
+}
+
+.custom-breadcrumbs span {
+    color: white; /* Span color */
+}
+
+.container1 {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        table th, table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #5d6d7e ;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        table td {
+            background-color: #f8f9fa;
+                 color: #000;
+            font-weight: bold;
+        }
+
+        table tr:hover {
+            background-color: #e9ecef;
+        }
+
+        /* Certificates Section */
+        .certificates {
+            margin-top: 40px;
+        }
+
+        .certificates h3 {
+            font-size: 28px;
+            color: #34495e;
+            margin-bottom: 20px;
+            border-bottom: 5px solid #007bff;
+            padding-bottom: 10px;
+        }
+
+        .certificate-item {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .certificate-item h4 {
+            margin-top: 0;
+            font-size: 20px;
+            color: #34495e;
+        }
+
+        .certificate-item p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .resume-link {
+            color: #007bff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .resume-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .section-hero {
+                padding: 50px 0;
+                text-align: center;
+            }
+
+            .section-hero .text-white {
+                font-size: 28px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            table {
+                font-size: 14px;
+                border: none;
+                box-shadow: none;
+            }
+
+            table th, table td {
+                padding: 10px;
+            }
+
+            .certificates h3 {
+                font-size: 22px;
+            }
+
+            .certificate-item {
+                padding: 15px;
+            }
+
+            .certificate-item h4 {
+                font-size: 18px;
+            }
+        }
+.navbar {
+    background-color: transparent !important; /* Fully transparent background */
+    border: none; /* Remove any borders if present */
+}
+
+.navbar .nav-link {
+    color: white !important; /* Ensure navbar links are white */
+}
+
+.navbar .nav-link:hover {
+    color: #ddd !important; /* Change link color on hover */
+}
+
+.navbar .navbar-brand {
+    color: white !important; /* Ensure the brand name is visible */
+}
+
+.navbar-toggler {
+    border-color: white !important; /* Ensures the navbar toggle icon is visible */
+}
+
+
+.container1 h2{
+  font-size: 35px;
+    color:#34495e  ;
+    margin-bottom: 10px;
+    padding-bottom: px;
+        font-weight: bold;
+}
+.container1 h3{
+    font-size: 28px;
+    color: #34495e ;
+    margin-bottom: 20px;
+    border-bottom: 5px solid #9c3f2b;
+    padding-bottom: 10px;
+    }
