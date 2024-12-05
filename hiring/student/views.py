@@ -7,7 +7,7 @@ def front(request):
     return render(request,"index.html")
 
 
-##################################################### STUDENT  ################################################################3
+##################################################### STUDENT  OPRATIONS  ################################################################3
 def sign_in(request):
     return render(request,"loginstudent.html")
 
