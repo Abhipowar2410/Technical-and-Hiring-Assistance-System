@@ -318,7 +318,7 @@ def search_students(request):
 
 
 
-################################################## QUIZ /OPRATIONS  LOGIC ##################################################
+################################################## QUIZ ##################################################
 
 def quiz(request, course_id, level):
     if request.session.get('username') is None:
