@@ -7,7 +7,7 @@ def front(request):
     return render(request,"index.html")
 
 
-##################################################### STUDENT  OPRATIONS  ################################################################3
+##################################################### STUDENT ################################################################3
 def sign_in(request):
     return render(request,"loginstudent.html")
 
@@ -156,7 +156,7 @@ def search_courses(request):
     return render(request, 'search.html', {'form': form, 'courses': courses})
 
 
-########################################################## HR OPRATIONS ################################################
+########################################################## HR  ################################################
 
 def hr_login(request):
     return render(request,"hr_login.html")
