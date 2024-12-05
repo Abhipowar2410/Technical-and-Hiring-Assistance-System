@@ -203,14 +203,13 @@ def hr_registration_save(request):
             # Get form data
             na = request.POST['name']
             em = request.POST['email']
-            ph = request.POST['contact_number']  # Correctly get contact number
+            ph = request.POST['contact_number']
             pas = request.POST['password']
             ci = request.POST['city']
-            co = request.POST.get('company_name', '')  # Add company name
+            co = request.POST.get('company_name', '')
             ge = request.POST['gender']
-            ed = request.POST.get('education', '')  # Optional field for education
+            ed = request.POST.get('education', '')
 
-            # Create a new Manager instance
             manager = Manager(
                 name=na,
                 email=em,
@@ -222,32 +221,28 @@ def hr_registration_save(request):
                 gender=ge
             )
 
-            # Save the instance to the database
-            manager.save()  # Correctly save the instance
+            manager.save()
 
-            # Add success message and redirect
             messages.success(request, "HR Registration Successfully Completed")
-            return redirect('/')  # Redirect to the desired URL after success
+            return redirect('/')
 
         except Exception as e:
-            # Handle any exception and return a failure message
             messages.error(request, f"Failed to register: {str(e)}")
             return redirect('/')
 
     else:
-        # Return a failure response for non-POST requests
         return HttpResponse("Invalid Request")
 
 
 def HR_edit_profile(request):
     if request.session.get('username') is not None:
         email = request.GET.get("email")
-        data1 = Manager.objects.filter(email=email).first()  # Get the first object from the queryset
+        data1 = Manager.objects.filter(email=email).first()
         if data1:
             return render(request, "HR_edit_profile.html", {'data1': data1})
         else:
 
-            return redirect('/HR_dashboard')  # Handle case where email does not exist
+            return redirect('/HR_dashboard')
     else:
         return redirect('/')
 
@@ -255,7 +250,6 @@ def HR_edit_profile(request):
 def HR_update_data(request):
     if request.session.get('username') is not None:
         if request.method == "POST":
-            # Fetch data from the form
             na = request.POST['name']
             em = request.POST['email']
             pas = request.POST['password']
@@ -265,10 +259,8 @@ def HR_update_data(request):
             ci = request.POST['city']
             ge = request.POST['Gender']
 
-            # Fetch the specific Manager object by email
             try:
                 manager = Manager.objects.get(email=em)
-                # Update the manager's details
                 manager.name = na
                 manager.password = pas
                 manager.company_name = company
@@ -300,15 +292,12 @@ def HR_profile(request):
 def std_profile_for_hr(request, student_id):
     email = request.session.get('username')
 
-    # Fetch student by ID
     student = get_object_or_404(Student, id=student_id)
 
-    # Fetch certificates by email
-    cert = certificate.objects.filter(email=student.email)  # Use student.email, not student_id
+    cert = certificate.objects.filter(email=student.email)
 
     print(cert)
-    # Fetch student results by email or student_id
-    student_results = Std_Result.objects.filter(email=student.email)  # or filter by student_id if available
+    student_results = Std_Result.objects.filter(email=student.email)
 
     context = {
         'students': [student],
@@ -321,41 +310,33 @@ def std_profile_for_hr(request, student_id):
 def search_students(request):
     query = request.GET.get('student_name', '')
     if query:
-        students = Student.objects.filter(name__icontains=query)  # Search students by name
+        students = Student.objects.filter(name__icontains=query)
     else:
-        students = Student.objects.none()  # Return an empty queryset if no query
+        students = Student.objects.none()
 
     return render(request, 'student_search.html', {'students': students})
 
 
 
-#########################################################################################################################
-                                                   ## QUIZ /OPRATIONS  LOGIC ###
+################################################## QUIZ /OPRATIONS  LOGIC ##################################################
 
 def quiz(request, course_id, level):
-    # Check if the user is logged in by checking the session for 'username'
     if request.session.get('username') is None:
-        return redirect('/')  # Redirect to home or login page if not logged in
+        return redirect('/')
 
-    # Get the course object for the given course_id
     course_obj = get_object_or_404(course, pk=course_id)
 
-    # Get the quiz questions for the course and level
     questions = exam.objects.filter(course_type=course_obj, course_type__course_type=level)
 
     if request.method == 'POST':
-        # Get user details from the form (name and email)
         name = request.POST.get('name')
         email = request.POST.get('email')
 
-        # Initialize the total score
         total_score = 0
 
-        # Process quiz answers and store them in the submit_test model
         for question in questions:
             selected_option = request.POST.get(f'question_{question.id}')
 
-            # Save the student's answer in submit_test
             submit_test.objects.create(
                 name=name,
                 email=email,
@@ -382,7 +363,7 @@ def quiz(request, course_id, level):
             'course': course_obj.course,
             'level': level,
             'total_score': total_score,
-            'max_score': len(questions) * 2  # 2 marks per question
+            'max_score': len(questions) * 2
         }
 
         # Render the result page
@@ -392,7 +373,7 @@ def quiz(request, course_id, level):
         'course': course_obj,
         'level': level,
         'questions': questions,
-        'session_name': request.session.get('name', '')  # Pass session name to the template
+        'session_name': request.session.get('name', '')
 
     }
 
