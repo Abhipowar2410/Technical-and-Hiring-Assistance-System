@@ -330,9 +330,7 @@ def search_students(request):
 
 
 #########################################################################################################################
-                                                   ## QUIZ /PRATIONS  LOGIC ###
-
-
+                                                   ## QUIZ /OPRATIONS  LOGIC ###
 
 def quiz(request, course_id, level):
     # Check if the user is logged in by checking the session for 'username'
